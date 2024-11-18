@@ -87,7 +87,7 @@ const LinePlot = ({ data }) => {
 
   return (
     <div className="bg-white p-4 rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold mb-4">
+      <h3 className="text-xl font-semibold mb-4 text-black">
         Valence Over Time (Emotion)
       </h3>
       <Line data={chartData} options={options} />

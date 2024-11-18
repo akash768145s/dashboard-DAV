@@ -107,7 +107,7 @@ const HistogramWithKDE = ({ data }) => {
         <Bar data={histogramDataConfig} options={chartOptions} />
       </div>
       <div className="p-4 bg-white rounded-lg shadow-md">
-        <h3 className="text-lg font-semibold mb-2">
+        <h3 className="text-lg font-semibold mb-2 text-black">
           Emotion Positivity (KDE Line)
         </h3>
         <Line data={kdeDataConfig} options={chartOptions} />
