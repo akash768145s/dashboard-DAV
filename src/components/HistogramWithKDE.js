@@ -28,7 +28,11 @@ const HistogramWithKDE = ({ data }) => {
   });
 
   const kde = kernelDensityEstimation();
-  const densityValues = kde(valenceValues, bins.map((_, i) => minValence + i * binWidth), 0.05);
+  const densityValues = kde(
+    valenceValues,
+    bins.map((_, i) => minValence + i * binWidth),
+    0.05
+  );
 
   const histogramDataConfig = {
     labels: bins.map((_, i) => (minValence + i * binWidth).toFixed(2)),
@@ -97,11 +101,15 @@ const HistogramWithKDE = ({ data }) => {
   return (
     <div>
       <div className="p-4 bg-white rounded-lg shadow-md">
-        <h3 className="text-lg font-semibold mb-2">Emotion Positivity (Histogram)</h3>
+        <h3 className="text-lg font-semibold mb-2 text-black">
+          Emotion Positivity (Histogram)
+        </h3>
         <Bar data={histogramDataConfig} options={chartOptions} />
       </div>
       <div className="p-4 bg-white rounded-lg shadow-md">
-        <h3 className="text-lg font-semibold mb-2">Emotion Positivity (KDE Line)</h3>
+        <h3 className="text-lg font-semibold mb-2">
+          Emotion Positivity (KDE Line)
+        </h3>
         <Line data={kdeDataConfig} options={chartOptions} />
       </div>
     </div>
