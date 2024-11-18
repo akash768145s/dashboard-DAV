@@ -34,7 +34,7 @@ const TwoWayANOVA = ({ data }) => {
     // Calculate Total Sum of Squares (SST)
     const allData = [].concat(...moods, ...releaseYears);
     const totalMean = mean(allData);
-    const SST = sumOfSquares(allData, totalMean);
+   
 
     // Calculate Sum of Squares Between (SSB) and Sum of Squares Within (SSW)
     const SSB = moods.reduce((acc, group) => {
